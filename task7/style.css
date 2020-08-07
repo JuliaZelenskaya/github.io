@@ -1,0 +1,310 @@
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body{
+  scroll-behavior: smooth;
+}
+
+/* navigation */
+#fixed_menu{
+  position: fixed;
+  left: 50%;
+  margin-left: -190px;
+  z-index: 5;
+}
+.navigation{
+  margin: 20px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+li a{
+  display: block;
+  background-color: white;
+  padding: 5px 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+li+li{
+  margin-left:10px;
+}
+ul>li>a{
+  margin: 5px 0;
+}
+ul ul li{
+  margin: 0;
+}
+.floatlist li>a{
+  margin-right: 10px;
+}
+.hometask .floatlist{
+  position: absolute;
+}
+.hometask, .floatlist{
+  display: none;
+}
+.navigation>li:last-child:hover .hometask{
+  display: block;
+  position: absolute;
+  top: 100%;
+}
+.hometask>li:first-child:hover .floatlist{
+  display: block;
+  position: absolute;
+  right: 100%;
+  top:0;
+}
+li a:hover{
+  background-color: black;
+  color: white;
+}
+
+/* main page */
+#wrapper{ 
+  width: 1200px; 
+  margin: 0 auto; 
+  padding-top: 76px;
+}
+h1{
+  text-align: left;
+  padding: 0 0 40px;
+  border-bottom: 2px solid black;
+  text-indent: 20px;
+  background: url(images/text-backfround.jpg);
+  background-size: cover;
+  color: rgba(0,0,0,0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 100px;
+  font-weight: 600;
+}
+h2{
+  padding: 10px 0;
+  text-indent: 20px;
+  font-weight: 600;
+}
+h3{
+  text-indent: 20px;
+  padding: 10px 0;
+}
+p {
+  text-align: justify;
+  text-indent: 20px;
+}
+#maincontent{
+  padding: 30px 0;
+  border-bottom: 2px solid black;
+}
+.content{
+  padding: 10px; 
+  margin: 15px 0px;
+}
+.colortype{
+  padding: 10px 0; 
+  background: url(images/text-backfround.jpg);
+  padding: 30px;
+  background-clip: padding-box;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.substrate{
+  background-color: white;
+}
+.colour{
+  border-top: 5px dotted;
+}
+.choice{
+  margin: 0 0 25px;
+}
+div>div>span{
+  padding: 10px;
+}
+a{
+  text-transform: uppercase;
+  color: black;
+}
+.wrapper div{
+  text-align: center;
+}
+
+/* gallery */
+.wrapper{ 
+  padding-top: 76px;
+}
+#menu{
+  background: rgba(206, 168, 168, 0.5);
+  width: 100px;
+  height: 400px;
+  position: fixed;
+  padding: 0;
+  top: 50%;
+  margin-top: -200px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#menu>a{
+  margin: 0;
+  padding: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+#menu>a:hover{
+  color: white;
+}
+.images{
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+.images:hover>.inscription{
+  display: block;
+}
+.inscription{
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  top:50%;
+  margin: -50px 0 0;
+  padding: 0;
+  font-size: 50px;
+  line-height: 100px;
+  color: black);
+  text-align: center;
+  text-transform: uppercase;
+  display: none;
+  overflow: hidden;
+}
+
+/* hometasks */
+.wrap{
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 76px;
+}
+.wrap div{
+  outline: 0.1px solid black;
+}
+.w400{
+  width: 400px;
+}
+.w800{
+  width: 800px;
+}
+.w200{
+  width: 200px;;
+}
+
+/* float */
+.parts_cl{
+  margin-top: 10px;
+  background-color: royalblue;
+}
+.float{
+  float: left;
+}
+.clr{
+  clear: left;
+}
+
+/* table-cell */
+.parts_t-cell{
+  margin-top: 10px;
+  background-color: thistle;
+}
+.t-cell{
+  display: table-cell;
+}
+
+/* in-block */
+.parts_in-bl{
+  margin-top: 10px;
+  background-color: yellowgreen;
+}
+.in_block{
+  font-size: 0;
+}
+.in_in_bl{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+/* flex */
+.parts_fl{
+  margin-top: 10px;
+  background-color: darkorange;
+}
+.width400{
+  flex: 0 0 400px;
+}
+.width800{
+  flex: 0 0 800px;
+}
+.flex{
+  display: flex;
+}
+
+/* pseudo */
+.parts_ps{
+  margin-top: 10px;
+  background-color: teal;
+}
+.parts_ps::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+.float_ps{
+  float: left;
+}
