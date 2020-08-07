@@ -51,7 +51,7 @@ html, body{
   position: fixed;
   left: 50%;
   margin-left: -190px;
-  z-index: 15;
+  z-index: 5;
 }
 .navigation{
   margin: 20px 0;
