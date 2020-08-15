@@ -1,0 +1,480 @@
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body{
+  scroll-behavior: smooth;
+}
+
+/* navigation */
+#fixed_menu{
+  position: fixed;
+  left: 50%;
+  margin-left: -250px;
+  z-index: 10;
+}
+.navigation{
+  margin: 20px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.navigation li a{
+  display: block;
+  width: 100px;
+  text-align: center;
+  background-color: white;
+  padding: 5px 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  transition: background .5s cubic-bezier(0.44, 0.75, 0.63, 0.33);
+}
+.navigation>li+li{
+  margin-left:10px;
+}
+.navigation li>a{
+  margin: 5px 0;
+}
+.navigation ul li{
+  margin: 0;
+}
+.hometask li>a{
+  width: 160px;
+  padding: 15px 0;
+}
+.hometask .floatlist{
+  position: absolute;
+}
+.hometask{
+  height: 0;
+  overflow: hidden;
+  transition: height 1s ease;
+}
+.floatlist{
+  width: 0;
+  overflow: hidden;
+}
+.navigation>li:last-child:hover .hometask{
+  overflow: visible;
+  position: absolute;
+  height: 225px;
+}
+.hometask>li:first-child:hover .floatlist{
+  position: absolute;
+  right: 100%;
+  top:0;
+  width: 160px;
+  padding-right: 10px;
+  transition: width 1s ease;
+}
+.navigation li a:hover{
+  background-color: lightgray;
+  color: white;
+}
+
+/* navigation icons */
+
+.navigation>li>a:before, .socMenu>li>a, #float_list:before{
+  background: url(images/css_sprites.png);
+}
+
+.navigation>li>a{
+  display: block;
+  position: relative;
+  padding: 15px 10px 15px 50px;
+}
+.navigation>li>a:before{
+  content: " ";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.navigation>li:first-child>a:before{
+  background-position: -10px -290px;
+}
+.navigation>li+li>a:before{
+  background-position: -10px -360px;
+}
+
+.navigation>li+li+li>a{
+  padding: 15px 50px 15px 10px;
+}
+#float_list{
+  display: block;
+  position: relative;
+  text-align: center;
+  padding: 15px 10px 15px 50px;
+  width: 100px;
+}
+#float_list:before{
+  content: " ";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: -10px -150px;
+  transition: background .5s cubic-bezier(0.81, -0.02, 0.02, 1);
+}
+
+.hometask>li:first-child:hover #float_list:before{
+  background-position: -10px -220px;
+}
+.navigation>li+li+li>a:before{
+  left: auto;
+  right: 0;
+  top:0;
+  background-position: -10px -10px;
+  transition: background .5s cubic-bezier(0.81, -0.02, 0.02, 1);
+}
+
+.navigation>li+li+li:hover #hw7:before{
+  background-position:-10px -80px;
+}
+
+/* main page */
+#wrapper{ 
+  width: 1200px; 
+  margin: 0 auto; 
+  padding-top: 100px;
+}
+h1, .colortype{
+  background: url(images/text-backfround.jpg);
+}
+h1{
+  text-align: left;
+  padding: 0 0 40px;
+  border-bottom: 2px solid black;
+  text-indent: 20px;
+  background-size: cover;
+  color: rgba(0,0,0,0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-attachment: fixed;
+  font-size: 100px;
+  font-weight: 600;
+}
+h2{
+  padding: 10px 0;
+  text-indent: 20px;
+  font-weight: 600;
+}
+h3{
+  text-indent: 20px;
+  padding: 10px 0;
+}
+p {
+  text-align: justify;
+  text-indent: 20px;
+}
+#maincontent{
+  padding: 30px 0;
+  border-bottom: 2px solid black;
+}
+.content{
+  padding: 10px; 
+  margin: 15px 0px;
+}
+.colortype{
+  padding: 10px 0; 
+  padding: 30px;
+  background-clip: padding-box;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.substrate{
+  background-color: white;
+}
+.colour{
+  border-top: 5px dotted;
+}
+.choice{
+  margin: 0 0 25px;
+}
+div>div>span{
+  padding: 10px;
+}
+a{
+  text-transform: uppercase;
+  color: black;
+}
+.wrapper div{
+  text-align: center;
+}
+
+/* gallery */
+.wrapper{ 
+  padding-top: 100px;
+}
+#menu{
+  background: rgba(206, 168, 168, 0.5);
+  width: 100px;
+  height: 400px;
+  position: fixed;
+  padding: 0;
+  top: 50%;
+  margin-top: -200px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#menu>a{
+  margin: 0;
+  padding: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+#menu>a:hover{
+  color: white;
+}
+.images{
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+.images:hover>.inscription{
+  display: block;
+}
+.inscription{
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  top:50%;
+  margin: -50px 0 0;
+  padding: 0;
+  font-size: 50px;
+  line-height: 100px;
+  color: black);
+  text-align: center;
+  text-transform: uppercase;
+  display: none;
+  overflow: hidden;
+}
+
+/* hometasks */
+.wrap{
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 76px;
+}
+.wrap div{
+  outline: 0.1px solid black;
+}
+.w400{
+  width: 400px;
+}
+.w800{
+  width: 800px;
+}
+.w200{
+  width: 200px;;
+}
+
+/* float */
+.parts_cl{
+  margin-top: 10px;
+  background-color: royalblue;
+}
+.float{
+  float: left;
+}
+.clr{
+  clear: left;
+}
+
+/* table-cell */
+.parts_t-cell{
+  margin-top: 10px;
+  background-color: thistle;
+}
+.t-cell{
+  display: table-cell;
+}
+
+/* in-block */
+.parts_in-bl{
+  margin-top: 10px;
+  background-color: yellowgreen;
+}
+.in_block{
+  font-size: 0;
+}
+.in_in_bl{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+/* flex */
+.parts_fl{
+  margin-top: 10px;
+  background-color: darkorange;
+}
+.width400{
+  flex: 0 0 400px;
+}
+.width800{
+  flex: 0 0 800px;
+}
+.flex{
+  display: flex;
+}
+
+/* pseudo */
+.parts_ps{
+  margin-top: 10px;
+  background-color: teal;
+}
+.parts_ps::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+.float_ps{
+  float: left;
+}
+
+/* footer */
+.footer{
+  border-top: black solid 2px;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.socMenu{
+  display: flex;
+  justify-content: center;
+}
+.socMenu>li>a{
+  width: 127px; 
+  height: 127px;
+  display: block;
+  transition: background .5s ease;
+}
+
+#google{
+  background-position: -10px -430px;
+}
+#facebook{
+  background-position: -10px -724px;
+}
+#twitter{
+  background-position: -10px -1018px;
+}
+#instagram{
+  background-position: -10px -1312px;
+}
+#linkedin{
+  background-position: -10px -1606px;
+}
+
+#google:hover{
+  background-position: -10px -577px;
+}
+#facebook:hover{
+  background-position: -10px -871px;
+}
+#twitter:hover{
+  background-position: -10px -1165px;
+}
+#instagram:hover{
+  background-position: -10px -1459px;
+}
+#linkedin:hover{
+  background-position: -10px -1753px;
+}
+
+/* hover me
+
+.hover_me{
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+  position: fixed;
+  right: 0;
+  top:50%;
+  margin:-50px 0;
+}
+.hover_me>li{
+  line-height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hover_me>li:last-child{
+  width: 600px;
+  height:600px;
+  background: yellow;
+  position: absolute;
+  right: 0%;
+  top:50%;
+  margin-top:-300px;
+}
+.hover{
+  height: 400px;
+  width: 400px;
+  background-color: yellow;
+}
+.hover{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform: rotate(45deg);
+}
+.hover>li>a{
+  display: block;
+  width: 175px;
+  height: 175px;
+  margin: 10px;
+  background: violet;
+} */
